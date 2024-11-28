@@ -1,0 +1,174 @@
+/* General Reset */
+body, h1, input, ul, li, button, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #4CAF50;
+}
+
+/* Search Bar Styling */
+#searchBar {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Recipe List Styling */
+#recipeList {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Recipe List Item Styling */
+#recipeList > li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 15px; /* Adds space between entire recipes */
+}
+
+#recipeList > li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Add Recipe Form Styling */
+#addRecipeForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Width of the form */
+    display: none; /* Initially hidden */
+    position: fixed; /* Fixed to the side of the screen */
+    top: 20px; /* Distance from the top of the screen */
+    right: 20px; /* Distance from the right side of the screen */
+    z-index: 1000; /* Ensure the form is above other content */
+}
+
+/* Close Button Styling */
+#addRecipeForm .close-button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #999;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+#addRecipeForm .close-button:hover {
+    color: #333;
+}
+
+/* Input and Textarea Styling for Form */
+#addRecipeForm input,
+#addRecipeForm textarea,
+#addRecipeForm button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Submit Button Styling */
+#addRecipeForm button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#addRecipeForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Button Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+footer button:hover {
+    background-color: #45a049;
+}
+
+/* Add Recipe Button Styling */
+#addRecipeButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#addRecipeButton:hover {
+    background-color: #45a049;
+}
+
+/* Ingredient List Styling */
+#recipeList ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+#recipeList ul li {
+    padding: 5px 0;
+    border: none; /* Removes any border around ingredient items */
+    margin: 0; /* Ensures no additional spacing between ingredients */
+}
