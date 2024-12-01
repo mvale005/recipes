@@ -16,25 +16,33 @@ body {
 
 /* Header Styling */
 header {
-    text-align: center;
-    margin-bottom: 20px;
+    position: fixed; /* Fixes the entire header to the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the page */
+    background-color: #fff; /* White background for visibility */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for separation */
+    padding: 10px 0; /* Add spacing inside the header */
+    text-align: center; /* Center-align the content */
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin: 0;
     color: #4CAF50;
 }
 
 /* Search Bar Styling */
 #searchBar {
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    margin: 20px auto;
+    margin-top: 10px; /* Space between the title and search bar */
     padding: 10px;
+    width: 90%; /* Full width with padding */
+    max-width: 400px; /* Limit width on larger screens */
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
+    box-sizing: border-box; /* Ensures proper padding behavior */
 }
 
 /* Recipe List Styling */
@@ -42,7 +50,8 @@ header h1 {
     list-style: none;
     max-width: 600px;
     margin: 0 auto;
-    padding: 0;
+    padding: 20px;
+    margin-top: 90px;
 }
 
 /* Recipe List Item Styling */
@@ -60,19 +69,24 @@ header h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Add Recipe Form Styling */
 #addRecipeForm {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 400px; /* Width of the form */
+    box-shadow: 0 10px 20px rgba(1, 1, 1, 1.1);
+    height: 80%;
+    width: 80%; /* Responsive width */
+    max-width: 600px; /* Maximum width for larger screens */
     display: none; /* Initially hidden */
-    position: fixed; /* Fixed to the side of the screen */
-    top: 20px; /* Distance from the top of the screen */
-    right: 20px; /* Distance from the right side of the screen */
+    position: fixed; /* Keep it fixed to the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to truly center */
     z-index: 1000; /* Ensure the form is above other content */
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+    min-height: 580px;
 }
+
 
 /* Close Button Styling */
 #addRecipeForm .close-button {
@@ -98,9 +112,18 @@ header h1 {
 
 /* Input and Textarea Styling for Form */
 #addRecipeForm input,
-#addRecipeForm textarea,
 #addRecipeForm button {
     width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#addRecipeForm textarea{
+    width: 100%;
+    height: 30%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -142,23 +165,42 @@ footer button:hover {
     background-color: #45a049;
 }
 
-/* Add Recipe Button Styling */
+/* Add Recipe Button Styling (Hamburger Menu) */
 #addRecipeButton {
     position: fixed;
     top: 20px;
     right: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
 }
 
 #addRecipeButton:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Subtle hover effect */
+    border-radius: 50%; /* Optional: adds a circular hover effect */
+}
+
+/* Hamburger Lines */
+#addRecipeButton span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #4CAF50;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+}
+
+#addRecipeButton:hover span {
     background-color: #45a049;
 }
+
 
 /* Ingredient List Styling */
 #recipeList ul {
@@ -172,3 +214,4 @@ footer button:hover {
     border: none; /* Removes any border around ingredient items */
     margin: 0; /* Ensures no additional spacing between ingredients */
 }
+
