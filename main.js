@@ -5,7 +5,7 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstati
 
 // Firebase config and initialization
 const firebaseConfig = {
-  apiKey: "AIzaSyB0NHdMFHdNpt98s-gJK7-JFhSFYvi6EoU",
+  apiKey: "AIzaSyCiRHWB8KxYom7TAAztSDRLc0kiLNoPpzg",
   authDomain: "recipe-website-b9f83.firebaseapp.com",
   projectId: "recipe-website-b9f83",
   storageBucket: "recipe-website-b9f83.appspot.com",
