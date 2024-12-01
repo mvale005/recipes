@@ -9,10 +9,11 @@
 <body>
   <header>
     <h1>Recipe Website</h1>
+    <input type="text" id="searchBar" placeholder="Search for a recipe..." />
   </header>
   
   <main>
-    <input type="text" id="searchBar" placeholder="Search for a recipe..." />
+  
     <ul id="recipeList">
       <!-- Recipes will go here -->
     </ul>
@@ -23,14 +24,19 @@
     <button class="close-button">×</button>
     <h2 id="formTitle">Add Recipe</h2>
     <input type="text" id="recipeTitle" placeholder="Recipe Title" />
-    <textarea id="recipeIngredients" placeholder="Ingredients (comma-separated)"></textarea>
+    <textarea id="recipeIngredients" placeholder="Ingredients - one line per ingredient"></textarea>
     <textarea id="recipeInstructions" placeholder="Instructions"></textarea>
      <!-- REMOVING IMAGE FUNTIONALITY FOR NOW - <input type="file" id="recipeImage" /> -->
     <button id="submitRecipeButton">Submit Recipe</button>
   </div>
 
   <footer>
-    <button id="addRecipeButton">Add Recipe</button>
+    <button id="addRecipeButton">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
   </footer>
 
 <script type="module" src="main.js"></script>
